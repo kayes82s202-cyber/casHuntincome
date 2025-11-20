@@ -13,6 +13,7 @@
             --success-color: #28a745;
             --danger-color: #dc3545;
             --warning-color: #ffc107;
+            --youtube-color: #FF0000;
             --dark-color: #1a1a2e;
             --light-color: #f8f9fa;
             --card-bg: #16213e;
@@ -73,6 +74,53 @@
             font-size: 12px;
             font-weight: 600;
             margin-top: 10px;
+        }
+        
+        /* YouTube Notice Banner */
+        .youtube-notice {
+            background: linear-gradient(135deg, #FF0000, #CC0000);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin: 0;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        .youtube-notice-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .youtube-notice i {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .youtube-notice strong {
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .youtube-notice a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .youtube-notice a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
         }
         
         .user-card, .stat-card, .progress-container, .referral-section, .rate-info, .withdraw-section, .ad-status, .daily-limit {
@@ -419,12 +467,12 @@
         
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.02); }
             100% { transform: scale(1); }
         }
         
         .pulse { 
-            animation: pulse 1.5s infinite; 
+            animation: pulse 2s infinite; 
         }
         
         @keyframes coinAnimation {
@@ -615,6 +663,8 @@
         
         @media (max-width: 400px) {
             .header h1 { font-size: 20px; }
+            .youtube-notice { padding: 12px; font-size: 14px; }
+            .youtube-notice-content { flex-direction: column; gap: 8px; }
             .stats-container { grid-template-columns: 1fr; }
             .btn { padding: 12px; font-size: 14px; }
             .nav-item { font-size: 10px; padding: 5px; }
@@ -654,6 +704,18 @@
             <h1>Earn Money - Watch Ads</h1>
             <p>Earn real money by watching ads</p>
             <div class="badge">Active</div>
+        </div>
+        
+        <!-- YouTube Notice Banner -->
+        <div class="youtube-notice pulse">
+            <div class="youtube-notice-content">
+                <i class="fab fa-youtube"></i>
+                <strong>IMPORTANT NOTICE:</strong> 
+                <span>You must subscribe to our YouTube channel to receive payments!</span>
+                <a href="https://www.youtube.com/@Babykids-w4x" target="_blank">
+                    <i class="fab fa-youtube"></i> Subscribe Now
+                </a>
+            </div>
         </div>
         
         <!-- First ad below header -->
@@ -868,6 +930,15 @@
             <h3 class="section-title"><i class="fas fa-bell"></i> Notices & Updates</h3>
             
             <div class="notification-list">
+                <div class="stat-card">
+                    <h3><i class="fab fa-youtube" style="color: #FF0000;"></i> YouTube Subscription Required</h3>
+                    <p>You must subscribe to our YouTube channel to receive payments. Make sure to subscribe and stay updated.</p>
+                    <a href="https://www.youtube.com/@Babykids-w4x" target="_blank" style="color: #FF0000; text-decoration: none; font-weight: bold;">
+                        <i class="fab fa-youtube"></i> Subscribe Now
+                    </a>
+                    <small>Important Notice</small>
+                </div>
+                
                 <div class="stat-card">
                     <h3><i class="fas fa-info-circle"></i> New Update</h3>
                     <p>Auto ads system has been launched. You can now earn money by watching ads automatically.</p>
